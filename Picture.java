@@ -11,10 +11,11 @@
  */
 public class Picture
 {
-    private Square wall;
-    private Square window;
+    private Square grass;
+    private Square dirtPath;
     private Triangle roof;
     private Circle sun;
+    private Person me;
     private boolean drawn;
 
     /**
@@ -22,10 +23,11 @@ public class Picture
      */
     public Picture()
     {
-        wall = new Square();
-        window = new Square();
+        grass = new Square();
+        dirtPath = new Square();
         roof = new Triangle();  
         sun = new Circle();
+        me = new Person();
         drawn = false;
     }
 
@@ -35,16 +37,17 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.makeVisible();
+            grass.changeColor("green");
+            grass.moveHorizontal(-350);
+            grass.moveVertical(130);
+            grass.changeSize(550);
+            grass.makeVisible();
             
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
+            dirtPath.changeColor("black");
+            dirtPath.moveHorizontal(-250);
+            dirtPath.moveVertical(120);
+            dirtPath.changeSize(100);
+            dirtPath.makeVisible();
     
             roof.changeSize(60, 180);
             roof.moveHorizontal(20);
@@ -56,6 +59,10 @@ public class Picture
             sun.moveVertical(-40);
             sun.changeSize(80);
             sun.makeVisible();
+            
+            
+            me.moveVertical(40);
+            me.makeVisible();
             drawn = true;
         }
     }
@@ -65,8 +72,8 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
-        window.changeColor("white");
+        grass.changeColor("black");
+        dirtPath.changeColor("white");
         roof.changeColor("black");
         sun.changeColor("black");
     }
@@ -76,8 +83,8 @@ public class Picture
      */
     public void setColor()
     {
-        wall.changeColor("red");
-        window.changeColor("black");
+        grass.changeColor("green");
+        dirtPath.changeColor("black");
         roof.changeColor("green");
         sun.changeColor("yellow");
     }
