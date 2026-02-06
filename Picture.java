@@ -1,13 +1,11 @@
 /**
- * This class represents a simple picture. You can draw the picture using
- * the draw method. But wait, there's more: being an electronic picture, it
- * can be changed. You can set it to black-and-white display and back to
- * colors (only after it's been drawn, of course).
+ * This represents a picture of my girlfriend and I looking at a mountain
+ * range on our vacation to colorado. Shows in both black and white and back to color. 
  *
- * This class was written as an early example for teaching Java with BlueJ.
  * 
- * @author  Michael Kšlling and David J. Barnes
- * @version 2016.02.29
+ * 
+ * @author  Joseph Schiavone
+ * @version 2026.02.06
  */
 public class Picture
 {
@@ -158,10 +156,22 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        grass1.changeColor("black");
-        dirtPath.changeColor("white");
+        sky.changeColor("white");
+        mountainLine.changeColor("black");
         mountain1.changeColor("black");
+        mountain2.changeColor("black");
+        mountain3.changeColor("black");
+        mountain4.changeColor("black");
+        snowyPeak1.changeColor("black");
+        snowyPeak2.changeColor("black");
+        snowyPeak3.changeColor("black");
+        snowyPeak4.changeColor("black");
+        grass2.changeColor("black");
+        dirtPath.changeColor("white");
+        grass1.changeColor("black");
         sun.changeColor("black");
+        me.changeColor("white");
+        gf.changeColor("white");
     }
 
     /**
@@ -169,9 +179,21 @@ public class Picture
      */
     public void setColor()
     {
+        sky.changeColor("tiffanyBlue");
+        grass2.changeColor("green");
+        mountainLine.changeColor("dirtBrown");
+        dirtPath.changeColor("dirtBrown");
         grass1.changeColor("green");
-        dirtPath.changeColor("black");
         mountain1.changeColor("green");
+        mountain2.changeColor("green");
+        mountain3.changeColor("green");
+        mountain4.changeColor("green");
+        snowyPeak1.changeColor("white");
+        snowyPeak2.changeColor("white");
+        snowyPeak3.changeColor("white");
+        snowyPeak4.changeColor("white");
         sun.changeColor("yellow");
+        me.changeColor("black");
+        gf.changeColor("black");
     }
 }
